@@ -31,6 +31,13 @@ CREATE TABLE classrooms (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE laboratories (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE TABLE cycles (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(10) NOT NULL,
@@ -72,4 +79,22 @@ CREATE TABLE assigned_classes (
     FOREIGN KEY(group_id) REFERENCES "groups"(id),
     FOREIGN KEY(teacher_id) REFERENCES teachers(id),
 	FOREIGN KEY(cycle_id) REFERENCES cycles(id)
+);
+
+CREATE TABLE assigned_labs (
+    id SERIAL PRIMARY KEY,
+    laboratory_id INT NOT NULL,
+    subject_id INT NOT NULL,
+    group_id INT NOT NULL,
+    teacher_id INT NOT NULL,
+    cycle_id INT NOT NULL,
+    assignment_priority priority_level NOT NULL DEFAULT 'baja',
+    UNIQUE (subject_id, group_id),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (laboratory_id) REFERENCES laboratories(id),
+    FOREIGN KEY (subject_id) REFERENCES subjects(id),
+    FOREIGN KEY (group_id) REFERENCES "groups"(id),
+    FOREIGN KEY (teacher_id) REFERENCES teachers(id),
+    FOREIGN KEY (cycle_id) REFERENCES cycles(id)
 );
