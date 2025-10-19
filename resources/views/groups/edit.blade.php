@@ -29,7 +29,7 @@
 
                 <div class="mb-3">
                     <label class="form-label">Semestre:</label>
-                    <input type="number" name="semester" class="form-control" min="1" value="{{ $group->semester }}" required>
+                    <input type="number" name="semester" class="form-control" max="9" value="{{ $group->semester }}" required>
                 </div>
 
                 <div class="mb-4">

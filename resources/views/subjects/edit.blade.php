@@ -29,12 +29,12 @@
 
                 <div class="mb-3">
                     <label class="form-label">Semestre:</label>
-                    <input type="number" name="semester" class="form-control" min="1" value="{{ $subject->semester }}" required>
+                    <input type="number" name="semester" class="form-control" max="9" value="{{ $subject->semester }}" required>
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Horas por semana:</label>
-                    <input type="number" name="hours_week" class="form-control" min="1" value="{{ $subject->hours_week }}" required>
+                    <input type="number" name="hours_week" class="form-control" max="6" value="{{ $subject->hours_week }}" required>
                 </div>
 
                 <div class="mb-4">
