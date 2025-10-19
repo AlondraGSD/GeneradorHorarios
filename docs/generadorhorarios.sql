@@ -1,4 +1,5 @@
 CREATE TYPE priority_level AS ENUM ('alta', 'baja');
+CREATE TYPE teacher_category AS ENUM ('Tiempo completo', 'Medio tiempo', 'Docentes de horas temporales sindicalizado', 'Docentes de horas temporales no sindicalizado', 'Docente de asignatura');
 
 CREATE TABLE subjects (
     id SERIAL PRIMARY KEY,
@@ -20,6 +21,7 @@ CREATE TABLE "groups" (
 CREATE TABLE teachers (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
+    category teacher_category NOT NULL DEFAULT 'Docente de asignatura',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
