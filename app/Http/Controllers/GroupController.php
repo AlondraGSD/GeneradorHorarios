@@ -27,7 +27,7 @@ class GroupController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'name' => 'required|string|max:100',
+            'name' => 'required|string|max:20',
             'semester' => 'required|integer',
         ]);
 
@@ -45,7 +45,7 @@ class GroupController extends Controller
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
-            'name' => 'required|string|max:100',
+            'name' => 'required|string|max:20',
             'semester' => 'required|integer',
         ]);
 
