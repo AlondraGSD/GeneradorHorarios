@@ -37,22 +37,22 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('classrooms*') ? 'active' : '' }}" href="{{ url('classrooms') }}">
-                            Salones
+                            <i class="bi bi-houses"></i> Salones
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('labs*') ? 'active' : '' }}" href="{{ url('labs') }}">
-                            Laboratorios
+                        <a class="nav-link {{ request()->is('laboratories*') ? 'active' : '' }}" href="{{ url('laboratories') }}">
+                            <i class="bi bi-laptop"></i> Laboratorios
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('assigned_labs*') ? 'active' : '' }}" href="{{ url('assigned_labs') }}">
-                            Laboratorios Asignados
+                            <i class="bi bi-pc-display-horizontal"></i> Laboratorios Asignados
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('assigned_classes*') ? 'active' : '' }}" href="{{ url('assigned_classes') }}">
-                            Clases
+                            <i class="bi bi-easel"></i> Clases
                         </a>
                     </li>
                 </ul>
