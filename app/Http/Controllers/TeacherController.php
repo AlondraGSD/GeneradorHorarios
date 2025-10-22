@@ -28,6 +28,7 @@ class TeacherController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:100',
+            'category' => 'required|in:Tiempo completo,Medio tiempo,Docentes de horas temporales sindicalizado,Docentes de horas temporales no sindicalizado,Docente de asignatura',
         ]);
 
         $this->service->store($validatedData);

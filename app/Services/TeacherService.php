@@ -21,6 +21,7 @@ class TeacherService
     {
         return Teacher::create([
             'name' => $data['name'],
+            'category' => $data['category'],
         ]);
     }
 
@@ -29,7 +30,9 @@ class TeacherService
         $teacher = Teacher::findOrFail($id);
         $teacher->update([
             'name' => $data['name'],
+            'category' => $data['category'],
         ]);
+
         return $teacher;
     }
 

@@ -28,6 +28,17 @@
                         value="{{ $teacher->name }}" required>
                 </div>
 
+                <div class="mb-3">
+                    <label class="form-label">Categoría:</label>
+                    <select name="category" class="form-control" required>
+                        <option value="Tiempo completo" {{ $teacher->category == 'Tiempo completo' ? 'selected' : '' }}>Tiempo completo</option>
+                        <option value="Medio tiempo" {{ $teacher->category == 'Medio tiempo' ? 'selected' : '' }}>Medio tiempo</option>
+                        <option value="Docentes de horas temporales sindicalizado" {{ $teacher->category == 'Docentes de horas temporales sindicalizado' ? 'selected' : '' }}>Docentes de horas temporales sindicalizado</option>
+                        <option value="Docentes de horas temporales no sindicalizado" {{ $teacher->category == 'Docentes de horas temporales no sindicalizado' ? 'selected' : '' }}>Docentes de horas temporales no sindicalizado</option>
+                        <option value="Docente de asignatura" {{ $teacher->category == 'Docente de asignatura' ? 'selected' : '' }}>Docente de asignatura</option>
+                    </select>
+                </div>
+
                 <div class="mb-4">
                     <button type="submit" class="btn btn-primary">Actualizar</button>
                     <a href="{{ route('teachers.index') }}" class="btn btn-secondary ms-2">Regresar</a>

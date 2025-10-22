@@ -45,6 +45,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
+                        <th>Categoría</th>
                         <th class="text-center">Acciones</th>
                     </tr>
                 </thead>
@@ -53,9 +54,12 @@
                     <tr>
                         <td>{{ $teacher->id }}</td>
                         <td>{{ $teacher->name }}</td>
+                        <td>{{ $teacher->category }}</td>
                         <td class="text-center">
+
+                            <button type="button" class="btn btn-warning">
                                 <i class="bi bi-clock"></i>
-                            </a>
+                            </button>
 
                             <a href="{{ route('teachers.edit', $teacher->id) }}" class="btn btn-primary">
                                 <i class="bi bi-pencil-square"></i>
@@ -76,6 +80,6 @@
             </table>
         </div>
     </div>
-
+    
 </div>
 @endsection
