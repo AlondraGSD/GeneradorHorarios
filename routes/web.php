@@ -7,6 +7,7 @@ use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\LaboratoryController;
 use App\Http\Controllers\AssignedClassController;
+use App\Http\Controllers\AssignedLabController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -18,3 +19,4 @@ Route::resource('teachers', TeacherController::class);
 Route::resource('classrooms', ClassroomController::class);
 Route::resource('laboratories', LaboratoryController::class);
 Route::resource('assigned_classes', AssignedClassController::class);
+Route::resource('assigned_labs', AssignedLabController::class);
