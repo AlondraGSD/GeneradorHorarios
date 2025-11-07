@@ -109,7 +109,7 @@ INSERT INTO teachers (name) VALUES
 ('Rigoberto Pérez Ovando'),
 ('Jesus Carlos Sanchez Guzman'),
 ('Adan Nañez Coutiño'),
-('Noe Toledo Castillejos'),}
+('Noe Toledo Castillejos'),
 ('Juan Jose Tevera Mandujano'),
 ('Carlos Alberto García Ramos'),
 ('Luis Gutiérrez Alfaro'),
@@ -129,11 +129,11 @@ INSERT INTO classrooms (name) VALUES
 ('B3'),
 ('B4'),
 ('B5'),
-('B6');
-('A7');
-('A8');
-('C1');
-('D1');
+('B6'),
+('A7'),
+('A8'),
+('C1'),
+('D1'),
 ('LINEA');
 
 INSERT INTO laboratories (name) VALUES 
